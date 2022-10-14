@@ -1,0 +1,53 @@
+.price
+    padding-top: 60px
+    &__title
+        position: relative
+        text-align: center
+        @include before_circle
+        &::before
+            top:-6
+            left:50%
+            transform: translateX(-50%) 
+    &__wrapper
+        position: relative 
+        padding-top: 60px
+        width: 1140px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(2, 360px)
+        grid-template-rows: repeat(3, 45px)
+        justify-content: space-between
+        gap: 15px
+    &__item
+        position: relative 
+        display: grid
+        grid-template-columns: 130px 90px
+        justify-content: space-between
+        .description
+            grid-column: 1/4
+        .money
+            justify-self: end
+            grid-column: 3/4
+        &_title
+            position: relative
+            padding-left: 25px
+            font-weight: 700
+            font-size: 14px
+            line-height: 21px
+            &_circle
+                position: absolute
+                height: 15px
+                width: 15px
+                background-color: $main_color
+                border-radius: 100%
+                top: 3px
+                left: 0px
+        &_price
+            font-weight: 700
+            font-size: 14px
+            line-height: 21px
+        &_descr
+            padding-left: 25px
+            font-weight: 500
+            font-size: 12px
+            line-height: 18px

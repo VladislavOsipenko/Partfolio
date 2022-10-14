@@ -1,0 +1,35 @@
+.skils
+    padding-top: 130px
+    &__title
+        position: relative
+        text-align: center
+        @include before_circle
+        &::before
+            top:-6
+            left:50%
+            transform: translateX(-50%) 
+    &__subtitle
+        text-align: center
+    &-container
+        position: relative
+        padding-top: 60px
+        width: 1140px
+        margin: 0 auto
+        display: grid
+        grid-template-columns: repeat(4, minmax(270px, auto))
+        grid-template-rows: repeat(2, minmax(270px, auto))
+        gap: 13px
+    &__border
+            padding: 30px 30px 25px 30px
+            height: 270px
+            width: 270px
+            border: 1px solid #000000
+    &__name
+        margin-top: 20px
+    &__descr
+        margin-top: 15px
+        font-weight: 500
+    #jquery
+        margin-top: 45px
+    #mongo
+        margin-top: 38px
