@@ -38,6 +38,30 @@
             grid-template-columns: repeat(2, 350px)
             grid-template-rows: repeat(3, 60px)
             justify-content: space-around
+    .portfolio
+        padding-top: 80px
+        &__wrapper
+            max-width: 960px
+            grid-template-columns: repeat(auto-fit, 280px)
+            grid-auto-rows: 280px
+            justify-content: space-around
+            row-gap: 20px
+            .horizontal, .vertical
+                grid-row: unset 
+                grid-column: unset 
+    .price
+        padding-top: 80px
+    .contacts
+        padding-top: 80px
+        &__wrapper
+            grid-template-columns: 350px 470px
+            gap: 20px
+        &__form
+            grid-template: 45px 190px 45px / repeat(2, 220px)
+
+
+        
+
 
 
 
@@ -79,6 +103,27 @@
             grid-template-columns: repeat(2, 350px)
             grid-template-rows: repeat(3, 60px)
             justify-content: space-around
+    .portfolio
+        padding-top: 80px
+        &__wrapper
+            max-width: 720px
+            grid-template-columns: repeat(auto-fit, 280px)
+            grid-auto-rows: 280px
+            justify-content: space-around
+            row-gap: 20px
+            .horizontal, .vertical
+                grid-row: unset 
+                grid-column: unset
+    .contacts
+        padding-top: 45px
+        &__wrapper
+            grid-template-columns: 585px
+            justify-content: center
+        &__photo
+            img
+                display: none
+        &__form
+            grid-template: 45px 190px 45px / repeat(2, 280px)
 
 @media (max-width: 768px)
     .container
@@ -123,7 +168,41 @@
         padding-top: 40px
         &-container 
             max-width: 540px
-            grid-template-columns: 350px  
+            grid-template-columns: 350px
+    .portfolio
+        padding-top: 45px
+        &__wrapper
+            padding-top: 45px
+            max-width: 540px
+            grid-template-columns: repeat(auto-fit, 280px)
+            grid-auto-rows: 280px
+            justify-content: space-around
+            row-gap: 20px
+            .horizontal, .vertical
+                grid-row: unset 
+                grid-column: unset  
+    .price
+        padding-top: 45px
+        &__wrapper
+            padding-top: 20px
+            grid-template-columns: repeat(auto-fit, 360px)
+    .contacts
+        &__wrapper
+            grid-template-columns: 525px
+            justify-content: center
+        &__form
+            grid-template: 45px 190px 45px / repeat(2, 240px)
+        &__triggers
+            grid-template-columns: 300px  
+            row-gap: 20px
+            justify-content: center
+        &__policy
+            justify-content: center 
+            
+        
+            
+
+
 
 
 
@@ -185,6 +264,38 @@
             grid-template-columns: 300px 
         &__line
             width: 300px 
+    .price
+        &__wrapper
+            grid-template-columns: repeat(auto-fit, 300px)
+        &__item
+            grid-template-columns: 150px 50px
+    .contacts
+        &__wrapper
+            grid-template-columns: 300px      
+        &__form
+            grid-template: 45px 45px 190px minmax(45px, auto) / 300px
+             
+        &__textarea 
+            grid-column: unset
+            width: 100%
+        &__triggers 
+            grid-column: unset
+            grid-template-columns: 1fr
+            column-gap: unset
+            row-gap: 20px
+        &__btn 
+            order: 2
+            max-width: 220px
+            margin: 0 auto
+        &__policy 
+            width: 180px
+            margin: 0 auto
+            line-height: 18px
+
+       
+            
+            
+            
 
             
 

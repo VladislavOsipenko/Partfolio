@@ -55,12 +55,12 @@
 
             <nav>
                 <ul class="menu__list">
-                    <li class="menu__link"><a href="#">ПРО МЕНЯ</a></li>
-                    <li class="menu__link"><a href="#">МОЙ ОПЫТ</a></li>
-                    <li class="menu__link"><a href="#">МОИ НАВЫКИ</a></li>
-                    <li class="menu__link"><a href="#">МОИ РАБОТЫ</a></li>
-                    <li class="menu__link"><a href="#">ПРАЙС-ЛИСТ</a></li>
-                    <li class="menu__link"><a href="#">КОНТАКТЫ</a></li>
+                    <li class="menu__link"><a href="#about">ПРО МЕНЯ</a></li>
+                    <li class="menu__link"><a href="#resume">МОЙ ОПЫТ</a></li>
+                    <li class="menu__link"><a href="#skils">МОИ НАВЫКИ</a></li>
+                    <li class="menu__link"><a href="#portfolio">МОИ РАБОТЫ</a></li>
+                    <li class="menu__link"><a href="#price">ПРАЙС-ЛИСТ</a></li>
+                    <li class="menu__link"><a href="#contacts">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
 
@@ -102,16 +102,27 @@
                 Я web-разработчик из города Запорожье
             </h1>
             <div class="promo__btns">
-                <a href="#" class="promo__link btn">Портфолио</a>
-                <a href="#" class="promo__link ">Про меня</a>
+                <a href="#portfolio" class="promo__link btn">Портфолио</a>
+                <a href="#about" class="promo__link ">Про меня</a>
 
             </div>
         </div>
     </section>
 
-    <section class="AboutMe">
+    <section id="about" class="AboutMe">
         <div class="grid-container">
-            <div class="AboutMe__photo"><img src="img/Photo.jpg" alt="Me"></div>
+            <div class="AboutMe__photo">
+<!--                 <img srcset="img/Photo-mobile.jpg 300w,
+                            img/Photo.jpg 400w"  
+                    sizes="(max-width: 576px) 280px,
+                            (min-width: 577px) 400px"       
+                src="img/Photo.jpg" alt="Me"> -->
+                <picture>
+                    <source media="(max-width: 576px)" srcset="img/MyFoto.jpg"> 
+                    <source media="(min-width: 577px)" srcset="img/Photo.jpg">
+                    <img src="img/Photo.jpg" alt="me">
+                </picture>
+            </div>
             <div class="AboutMe__descr">
                 <div class="title title_fz16 promo__subtitle">
                     Про меня
@@ -178,7 +189,7 @@
 
     </section>
 
-    <section class="resume">
+    <section id="resume" class="resume">
         <div class="container">
             <h2 class="title title_fz16 resume__title">Опыт</h2>
             <div class="title title_fz36 resume__subtitle">Чем я буду полезен</div>
@@ -190,7 +201,7 @@
                         <li>
                             <div class="resume__item"></div>
                                 <div class="resume__item-head">
-                                    <div class="resume__item-icon"><img src="/icons/university.png" alt="university"></div>
+                                    <div class="resume__item-icon"><img src="icons/university.png" alt="university"></div>
                                     <h4 class="title title_fz14">МГТУ им. Н. Э. Баумана</h4>
                                     <div class="resume__item-location">
                                         Диплом магистра | Москва (2014-2020)
@@ -204,7 +215,7 @@
                         <li>
                             <div class="resume__item"></div>
                                 <div class="resume__item-head">
-                                    <div class="resume__item-icon"><img src="/icons/courses.png" alt="courses"></div>
+                                    <div class="resume__item-icon"><img src="icons/courses.png" alt="courses"></div>
                                     <h4 class="title title_fz14">Udemy</h4>
                                     <div class="resume__item-location">
                                         Курсы по Web-разработке 
@@ -224,7 +235,7 @@
                         <li>
                             <div class="resume__item"></div>
                                 <div class="resume__item-head">
-                                    <div class="resume__item-icon"><img src="/icons/Developer.png" alt="Developer"></div>
+                                    <div class="resume__item-icon"><img src="icons/courses.png" alt="Developer"></div>
                                     <h4 class="title title_fz14">Front-End Developer</h4>
                                     <div class="resume__item-location">
                                         EPAM | Москва (2018-2019)
@@ -238,7 +249,7 @@
                         <li>
                             <div class="resume__item"></div>
                                 <div class="resume__item-head">
-                                    <div class="resume__item-icon"><img src="/icons/designer.png" alt="designer"></div>
+                                    <div class="resume__item-icon"><img src="icons/designer.png" alt="designer"></div>
                                     <h4 class="title title_fz14">UI/UX Designer</h4>
                                     <div class="resume__item-location">
                                         Squad Team | Москва (2018)
@@ -255,55 +266,55 @@
         </div>        
     </section >
 
-    <section class="skils">
+    <section id="skils" class="skils">
         <h2 class="title title_fz16 skils__title">Навыки</h2>
         <div class="title title_fz36 skils__subtitle">Что я использую в работе</div>
         <div class="divider"></div>
         <div class="skils-container">
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/html.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/html.png" alt="html5"></div>
                 <div class="title title_fz14 skils__name">HTML5</div>
                 <div class="skils__descr title title_fz12">
                     Именно он создает каркас вашего сайта или приложения, а пятая версия позволит мне создавать более SEO-оптимизированную структуру вашего продукта
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/css.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/css.png" alt="html5"></div>
                 <div class="title title_fz14 skils__name">CSS3</div>
                 <div class="skils__descr title title_fz12">
                     Этот язык стилей позволяет мне создавать абсолютно любой внешний вид вашего сайта или приложения. Все ограничивается только вашей фантазией!
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/js.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/js.png" alt="html5"></div>
                 <div class="title title_fz14 skils__name">Java Script</div>
                 <div class="skils__descr title title_fz12">
                     Этот язык программирования позволяет оживить все что угодно: слайдеры, окна, подсказки, вкладки, получение данных от сервера и многое другое
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/jquery.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/jquery.png" alt="html5"></div>
                 <div id="jquery" class="title title_fz14 skils__name">Jquery</div>
                 <div class="skils__descr title title_fz12">
                     Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/react.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/react.png" alt="html5"></div>
                 <div class="title title_fz14 skils__name">React</div>
                 <div class="skils__descr title title_fz12">
                     Эта библиотека позволяет создавать web-приложения. Мы можем создать максимально интерактивный продукт именно под ваши цели
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/node.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/node.png" alt="html5"></div>
                 <div class="title title_fz14 skils__name">Node.js</div>
                 <div class="skils__descr title title_fz12">
                     Эта платформа позволяет создавать бэкенд для вашего продукта - “мозги”, которые будут выполнять действия, которые пользователь не видит
                 </div>
             </div>
             <div class="skils__border">
-                <div class="skils__icon"><img src="/img/mongo.png" alt="html5"></div>
+                <div class="skils__icon"><img src="img/mongo.png" alt="html5"></div>
                 <div id="mongo" class="title title_fz14 skils__name">Mongo.db</div>
                 <div class="skils__descr title title_fz12">
                     Это нереляционная база данных, которая будет хранить данные вашего сайта или приложения
@@ -359,7 +370,7 @@
         </div>
     </section>
 
-<!--     <section class="portfolio">
+    <section id="portfolio" class="portfolio">
         <div class="container">
             <h2 class="title title_fz16 portfolio__title">Портфолио</h2>
             <div class="title title_fz36 portfolio__subtitle">Мои работы</div>
@@ -385,9 +396,9 @@
                 </a>
             </div>
         </div>
-    </section> -->
+    </section>
 
-<!--     <section class="price">
+    <section id="price" class="price">
         <div class="container">
             <div class="title title_fz16 price__title">
                 Прайс-лист
@@ -436,9 +447,9 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
-<!--     <section class="contacts">
+    <section id="contacts" class="contacts">
         <div class="container">
             <div class="contacts__wrapper">
                 <div class="contacts__photo">
@@ -458,13 +469,13 @@
                     </div>
                     <div class="contacts__social">
                         <a href="https://www.facebook.com/vlad.osipenko.925/photos_by" class="contacts__link">
-                            <img src="/icons/Facebookn.svg" alt="Facebook">
+                            <img src="icons/Facebookn.svg" alt="Facebook">
                         </a>
                         <a href="https://t.me/Jeveler1321" class="contacts__link">
-                            <img src="/icons/telegram.png" alt="telegram">
+                            <img src="icons/telegram.png" alt="telegram">
                         </a>
                         <a href="https://www.instagram.com/vladislav__osipenko/?next=%2F" class="contacts__link">
-                            <img src="/icons/Instagram.png" alt="Instagram">
+                            <img src="icons/Instagram.png" alt="Instagram">
                         </a>
                     </div>
                     <div class="title title_fz14 contacts__text">
@@ -497,7 +508,7 @@
 
             </div>
         </div>
-    </section> -->
+    </section>
 
 
 
