@@ -10,12 +10,16 @@ closeElem.addEventListener('click', () => {
     menu.classList.remove('active');
 });
 
+
+$('.modal__close').on('click', function() {
+    $('.overlay, #consultation, #thanks').fadeOut('slow');
+});
+
+
 $('form').submit(function(e) {
     e.preventDefault();
 
-    if (!$(this).valid()) {
-        return;
-    }
+   
 
     $.ajax({
         type: "POST",
@@ -23,9 +27,27 @@ $('form').submit(function(e) {
         data: $(this).serialize()
     }).done(function() {
         $(this).find("input").val("");
+        $('#consultation').fadeOut();
+        $('.overlay, #thanks').fadeIn('slow');
 
         $('form').trigger('reset');
     });
     return false;
 });
+
+$(document).ready(function() {
+    $("a").on('click', function(event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 450, function(){
+          window.location.hash = hash;
+        });
+        } 
+    });
+});
+
+
 
